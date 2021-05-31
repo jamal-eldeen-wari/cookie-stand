@@ -9,13 +9,13 @@ let Seattle = {
   getRandomNumberOfCustomers: function(){
     // let randomNumberOfCustomersPerHour = [];
     for(let i =0; i<hours.length ; i++){
-      randomNumberOfCustomersPerHour.push(getRandomNumber(Seattle.min, Seattle.max));
+      randomNumberOfCustomersPerHour.push(getRandomNumber(this.min, this.max));
     //   console.log(randomNumberOfCustomersPerHour);
     }
   },
   getCookies: function(){
     for (let i =0; i<hours.length; i++){
-      cookiesArrayForSeattle.push(randomNumberOfCustomersPerHour[i]*Math.ceil(Seattle.avgCookie));
+      cookiesArrayForSeattle.push(randomNumberOfCustomersPerHour[i]*Math.ceil(this.avgCookie));
     //   console.log(cookiesArrayForSeattle[i]);
     }
   }
@@ -23,8 +23,9 @@ let Seattle = {
 function getRandomNumber(min, max) {
   return Math.floor(Math.random() * (max - min + 1) ) + min;
 }
-Seattle.getRandomNumberOfCustomers(Seattle.min,Seattle.max);
+Seattle.getRandomNumberOfCustomers(this.min,this.max);
 Seattle.getCookies();
+// Adding elements in HTML
 let parentSeattle = document.getElementById('seattle');
 let child;
 let childSum;
@@ -55,20 +56,21 @@ let Tokyo = {
   avgCookie: 1.2,
   getRandomNumberOfCustomers: function(){
     for(let i =0; i<hours.length ; i++){
-      randomNumberOfCustomersPerHourForTokyo.push(getRandomNumber(Tokyo.min, Tokyo.max));
+      randomNumberOfCustomersPerHourForTokyo.push(getRandomNumber(this.min, this.max));
     //   console.log(randomNumberOfCustomersPerHourForTokyo);
     }
   },
   getCookies: function(){
     for (let i =0; i<hours.length; i++){
-      cookiesArrayForTokyo.push(randomNumberOfCustomersPerHourForTokyo[i]*Math.ceil(Tokyo.avgCookie));
+      cookiesArrayForTokyo.push(randomNumberOfCustomersPerHourForTokyo[i]*Math.ceil(this.avgCookie));
     //   console.log(cookiesArrayForTokyo[i]);
     }
   }
 
 };
-Tokyo.getRandomNumberOfCustomers(Tokyo.min, Tokyo.max);
+Tokyo.getRandomNumberOfCustomers(this.min, this.max);
 Tokyo.getCookies();
+// Adding elements in HTML
 let parentTokyo = document.getElementById('tokyo');
 let childTokoyo;
 let childTitleTokyo;
@@ -99,20 +101,21 @@ let Dubai = {
   avgCookie: 3.7,
   getRandomNumberOfCustomers: function(){
     for(let i =0; i<hours.length ; i++){
-      randomNumberOfCustomersPerHourForDubai.push(getRandomNumber(Dubai.min, Dubai.max));
+      randomNumberOfCustomersPerHourForDubai.push(getRandomNumber(this.min, this.max));
     //   console.log(randomNumberOfCustomersPerHourForDubai);
     }
   },
   getCookies: function(){
     for (let i =0; i<hours.length; i++){
-      cookiesArrayForDubai.push(randomNumberOfCustomersPerHourForDubai[i]*Math.ceil(Dubai.avgCookie));
+      cookiesArrayForDubai.push(randomNumberOfCustomersPerHourForDubai[i]*Math.ceil(this.avgCookie));
     //   console.log(cookiesArrayForDubai[i]);
     }
   }
 
 };
-Dubai.getRandomNumberOfCustomers(Dubai.min, Dubai.max);
+Dubai.getRandomNumberOfCustomers(this.min, this.max);
 Dubai.getCookies();
+// Adding elements in HTML
 let parentDubai = document.getElementById('dubai');
 let childDubai;
 let childDubaiTitle = document.createElement('p');
@@ -142,20 +145,21 @@ let Paris = {
   avgCookie: 2.3,
   getRandomNumberOfCustomers: function(){
     for(let i =0; i<hours.length ; i++){
-      randomNumberOfCustomersPerHourForParis.push(getRandomNumber(Paris.min, Paris.max));
+      randomNumberOfCustomersPerHourForParis.push(getRandomNumber(this.min, this.max));
     //   console.log(randomNumberOfCustomersPerHourForParis);
     }
   },
   getCookies: function(){
     for (let i =0; i<hours.length; i++){
-      cookiesArrayForParis.push(randomNumberOfCustomersPerHourForParis[i]*Math.ceil(Paris.avgCookie));
+      cookiesArrayForParis.push(randomNumberOfCustomersPerHourForParis[i]*Math.ceil(this.avgCookie));
     //   console.log(cookiesArrayForParis[i]);
     }
   }
 
 };
-Paris.getRandomNumberOfCustomers(Paris.min, Paris.max);
+Paris.getRandomNumberOfCustomers(this.min, this.max);
 Paris.getCookies();
+// Adding elements in HTML
 let parentParis = document.getElementById('paris');
 let childParis ;
 let childParisTitle = document.createElement('p');
@@ -185,20 +189,21 @@ let Lima = {
   avgCookie: 4.6,
   getRandomNumberOfCustomers: function(){
     for(let i =0; i<hours.length ; i++){
-      randomNumberOfCustomersPerHourForLima.push(getRandomNumber(Lima.min, Lima.max));
+      randomNumberOfCustomersPerHourForLima.push(getRandomNumber(this.min, this.max));
     //   console.log(randomNumberOfCustomersPerHourForLima);
     }
   },
   getCookies: function(){
     for (let i =0; i<hours.length; i++){
-      cookiesArrayForLima.push(randomNumberOfCustomersPerHourForLima[i]*Math.ceil(Lima.avgCookie));
+      cookiesArrayForLima.push(randomNumberOfCustomersPerHourForLima[i]*Math.ceil(this.avgCookie));
     //   console.log(cookiesArrayForLima[i]);
     }
   }
 
 };
-Lima.getRandomNumberOfCustomers(Lima.min, Lima.max);
+Lima.getRandomNumberOfCustomers(this.min, this.max);
 Lima.getCookies();
+// Adding elements in HTML
 let parnetLima = document.getElementById('lima');
 let childLima;
 let childLimaTitle = document.createElement('p');
