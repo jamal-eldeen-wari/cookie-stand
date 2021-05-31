@@ -1,7 +1,5 @@
 'use strict';
-let container = document.getElementById('container');
-let table = document.createElement('table');
-container.append(table);
+
 // let randomNumberOfCustomersPerHour = [];
 // let cookiesArrayForSeattle =[];
 // let Seattle = {
@@ -47,7 +45,9 @@ container.append(table);
 // childSum.textContent = 'Total '+ sum+' Cookies';
 // // console.log('Total '+ sum+' Cookies');
 // -----------------------------------------------------------NEW CODE---------------------------------------------
-
+let container = document.getElementById('container');
+let table = document.createElement('table');
+container.append(table);
 let hours = ['6 AM', '7 AM','8 AM', '9 AM', '10 AM', '11 AM', '12 PM', '1 PM', '2 PM', '3 PM', '4 PM', '5 PM', '6 PM',
   '7 PM', '8 PM'];
 function getRandomNumber(min, max) {
@@ -78,35 +78,21 @@ Shop.prototype.getCookies = function(){
     this.cookiesArray.push(this.randomNumber[i]*Math.floor(this.avgCookies));
   }
 };
+// This is the table section
 Shop.prototype.render = function(){
-
-
   let tableHeadingRow = document.createElement('tr');
   table.append(tableHeadingRow);
 
   let tableData = document.createElement('td');
   tableHeadingRow.append(tableData);
   tableData.textContent = this.branchName;
-  let sum = 0;
 
   for (let i = 0; i<hours.length; i++){
-    let sumContentData = document.createElement('td');
-    tableHeadingRow.append(sumContentData);
     let contentData = document.createElement('td');
     tableHeadingRow.append(contentData);
     contentData.textContent = this.cookiesArray[i];
-    sumContentData.textContent = sum+this.cookiesArray[i];
 
   }
-
-
-
-
-  // for (let i = 0; i<hours.length; i++){
-  //   tableHeading = document.createElement('th');
-  //   tableHeadingRow.append(tableHeading);
-  //   tableHeading.textContent = ' '+hours[i]+ ' ';
-  // }
 };
 function header() {
   let tableHeadingRow = document.createElement('tr');
@@ -120,14 +106,33 @@ function header() {
     tableHeadingRow.append(tableHeading);
     tableHeading.textContent = ' '+hours[i]+ ' ';
   }
+  let tableHeading2 = document.createElement('th');
+  tableHeadingRow.append(tableHeading2);
+  tableHeading2.textContent = 'Daily Location Total';
+  // let dailyLocationData = document.createElement('td');
+  // tableHeadingRow.append(dailyLocationData);
+  // THIS CODE NEEDS FIXING
+  for(let i = 0; i<hours.length; i++){
+    let dailyLocationData = document.createElement('td');
+    tableHeadingRow.append(dailyLocationData);
+  }
 }
 function footer(){
-  let tableFooterRow = document.createElement('tr');
-  table.append(tableFooterRow);
+  let sum = 0;
+  // Credit to w3Schools for helping me to create footer table.
+  let footer = table.createTFoot();
+  let row = footer.insertRow(0);
+  let cell = row.insertCell(0);
+  cell.innerHTML = '<b>Total</b>';
   for (let i = 0; i<hours.length; i++){
     let tableFooterData = document.createElement('td');
-    tableFooterRow.append(tableFooterData);
+    row.append(tableFooterData);
+    tableFooterData.textContent = sum;
+    for(let j =0; j<shops.length;j++){
+      sum = sum+this.cookiesArray;
+    }
   }
+
 }
 
 header();
@@ -143,8 +148,6 @@ for(let i = 0; i<shops.length; i++){
   shops[i].getCookies();
   shops[i].render();
 
-  // console.log(shops[i].randomNumber);
-  // console.log(shops[i].cookiesArray);
 
 }
 
