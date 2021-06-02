@@ -5,40 +5,130 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/indexstyle.css">
     <title>Salmon Cookies</title>
+    <style>
+        body {
+            background-color: aliceblue;
+        }
+
+        header {
+            background-color: cadetblue;
+        }
+
+        h1 {
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            /* background-color: brown; */
+            font-weight: bolder;
+            font-size: 35px;
+        }
+
+        ul {
+            position: relative;
+        }
+
+        nav ul li {
+            display: inline-block;
+            padding: 20px;
+            margin-left: 220px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: cornsilk;
+        }
+
+        h2 {
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 25px;
+            font-weight: bold;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        #locations {
+            position: relative;
+        }
+
+        #locations li {
+            display: inline-block;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            text-align: center;
+            padding: 20px;
+            margin-left: 50px;
+            margin-bottom: 20px;
+        }
+
+        h3 {
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        li p {
+            margin: 30px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-style: italic;
+        }
+
+        footer {
+            background-color: cadetblue;
+        }
+
+        footer p {
+            text-align: center;
+            font-weight: bold;
+        }
+
+        footer li {
+            text-align: center;
+            font-weight: bold;
+        }
+    </style>
 </head>
-<body style="background-color: aliceblue;">
-    <header style="background-color: cadetblue;">
-        <h1 style="font-family: Arial, Helvetica, sans-serif; text-align: center;">Salmon Cookies Website </h1>
+
+<body>
+    <header>
+        <h1>Salmon Cookies Website </h1>
         <nav>
-            <ul style="position: relative;">
-                <li style="display: inline-block; padding: 20px; margin-left: 200px; text-decoration: none;"><a href="#" style="text-decoration: none; color:cornsilk">Fish Types</a></li>
-                <li style="display: inline-block; padding: 20px; margin-left: 200px; text-decoration: none;"><a href="#" style="text-decoration: none; color:cornsilk">Cookies Cutter</a></li>
-                <li style="display: inline-block; padding: 20px; margin-left: 200px; "><a href="#" style="text-decoration: none; color:cornsilk">About Us</a></li>
+            <ul>
+                <li><a href="#">Fish Types</a></li>
+                <li><a href="#">Cookies Cutter</a></li>
+                <li><a href="#">About Us</a></li>
             </ul>
         </nav>
 
 
     </header>
     <main>
-        <h2 style="text-align: center; font-family: Arial, Helvetica, sans-serif;">Salmon Cookies Branches</h2>
-        <p style="font-family: Arial, Helvetica, sans-serif; text-align: center;">Our products can be found around our branches al over the world here is our branches and hours open in each branch:</p>
-        <ul style="position: relative;">
-            <li style="display:inline-block ;font-family:  Arial, Helvetica, sans-serif; font-weight: bold; text-align: center; padding: 20px; margin-left: 20px;">Seattle: 6AM Till 8PM</li>
-            <li style="display:inline-block ;font-family:  Arial, Helvetica, sans-serif; font-weight: bold; text-align: center;padding: 20px;margin-left: 20px;">Tokyo: 6AM Till 8PM</li>
-            <li style="display:inline-block ;font-family:  Arial, Helvetica, sans-serif; font-weight: bold; text-align: center;padding: 20px;margin-left: 20px;">Dubai: 6AM Till 8PM</li>
-            <li style="display:inline-block ;font-family:  Arial, Helvetica, sans-serif; font-weight: bold; text-align: center;padding: 20px;margin-left: 20px;">Paris: 6AM Till 8PM</li>
-            <li style="display:inline-block ;font-family:  Arial, Helvetica, sans-serif; font-weight: bold; text-align: center;padding: 20px;margin-left: 20px;">Lima: 6AM Till 8PM</li>
+        <h2>Salmon Cookies Branches</h2>
+        <p>Our products can be found around our branches all over the world here is our branches and hours open in each
+            branch:</p>
+        <ul id="locations">
+            <li>Seattle: 6AM Till 8PM</li>
+            <li>Tokyo: 6AM Till 8PM</li>
+            <li>Dubai: 6AM Till 8PM</li>
+            <li>Paris: 6AM Till 8PM</li>
+            <li>Lima: 6AM Till 8PM</li>
         </ul>
 
-        <p style="font-family: Arial, Helvetica, sans-serif; text-align: center;">Some of our best products that you can find while visiting our shops:</p>
-        <ul style="position: relative;">
+        <p>Some of our best products that you can find while visiting our shops:</p>
+        <ul>
             <li style="text-align: center; display: inline-block; margin-left: 350px;">
                 <h3>chinook Fish:</h3>
                 <img src="img/chinook.jpg" alt="chinook">
-                <p>chinook is one of our high requested fish it is a very cool looking fish</p></li>
-            <li style="text-align: center; display: inline-block; margin-left: 180px;">
+                <p>chinook is one of our high requested fish it is a very cool looking fish</p>
+            </li>
+            <li style="text-align: center; display: inline-block; margin-left: 225px;">
                 <h3>Salmon Fish:</h3>
                 <img src="img/salmon.png" alt="Salmon Fish">
                 <p>Who dosent like salmon fish it is the best</p>
@@ -48,47 +138,50 @@
                 <img src="img/fish.jpg" alt="fish">
                 <p>It is always targeted by Kids they love colorful stuff</p>
             </li>
-            <li style="text-align: center; display: inline-block; margin-left: 120px;">
+            <li style="text-align: center; display: inline-block; margin-left: 90px;">
                 <h3>Fish Cutter:</h3>
                 <img src="img/cutter.jpeg" alt="Cutter">
-                <p>It good for moms to bake some cookies to their kids rather than seening the cookies in there old fashion way CIRCLE make them like fish</p>
+                <p>It good for moms to bake some cookies to their kids rather than seening the cookies in there old
+                    fashion way CIRCLE make them like fish</p>
             </li>
-            <li style="text-align: center; display: inline-block; margin-left: 230px;">
+            <li style="text-align: center; display: inline-block; margin-left: 215px;">
                 <h3>Frosted-cookies:</h3>
                 <img src="img/frosted-cookie.jpg" alt="Frosted-cookies">
-                <p>If your mom doesnt want to make cookies we got you covered we have the tastiest cookies in the planet</p>
+                <p>If your mom doesnt want to make cookies we got you covered we have the tastiest cookies in the planet
+                </p>
             </li>
-            <li style="text-align: center; display: inline-block; margin-left: 280px;">
+            <li style="text-align: center; display: inline-block; margin-left: 260px;">
                 <h3>Fish Shirt:</h3>
                 <img src="img/shirt.jpg" alt="shirt">
                 <p>Talking about high quality shirt this one of our top merchandise all the customers love it</p>
             </li>
-            <li style="text-align: center; display: inline-block; margin-left: 140px;">
+            <li style="text-align: center; display: inline-block; margin-left: 180px;">
                 <h3>Family Product:</h3>
                 <img src="img/family.jpg" alt="family">
-                <p>Our Products are for every member of family</p>  
+                <p>Our Products are for every member of family</p>
             </li>
         </ul>
 
-        <h2 style="text-align: center; font-family: Arial, Helvetica, sans-serif;">Sales Sheet:</h2>
-        <p style="text-align: center; font-family: Arial, Helvetica, sans-serif;">In case you are curious about our sales we will provide you a table of our sales in all of our branches <a href="sales.html">Click HERE</a></p>
+        <h2>Sales Sheet:</h2>
+        <p>In case you are curious about our sales we will provide you a table of our sales in all of our branches <a
+                href="sales.html">Click HERE</a></p>
 
 
     </main>
 
-    <footer style="background-color: cadetblue;">
-        <p style="text-align: center;">Contact Info:</p>
-        <p style="text-align: center;">Phone numbers for our Branches:</p>
-        <li style="text-align: center;">Seattle: 32435436436</li>
-        <li style="text-align: center;">Tokyo: 896784054</li>
-        <li style="text-align: center;">Dubai: 7685467340</li>
-        <li style="text-align: center;">Paris: 4930634090</li>
-        <li style="text-align: center;">Lima: 23184320509</li>
+    <footer>
+        <p>Contact Info:</p>
+        <p>Phone numbers for our Branches:</p>
+        <li>Seattle: 324354364</li>
+        <li>Tokyo: 896784054</li>
+        <li>Dubai: 768546734</li>
+        <li>Paris: 493063409</li>
+        <li>Lima: 231843205</li>
 
-    <p style="text-align: center;">Email Address: salmoncookies@gmail.com</p>
-    <p style="text-align: center;">&#169; COPYRIGHT 2021</p>
+        <p>Email Address: salmoncookies@gmail.com</p>
+        <p>&#169; COPYRIGHT 2021</p>
 
     </footer>
-    <!-- <script src="js/app.js"></script> -->
 </body>
+
 </html>
