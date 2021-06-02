@@ -13,9 +13,37 @@
         <!-- <img src="https://codefellows.github.io/code-201-guide/curriculum/class-06/lab/assets/salmon.png" alt="Fish Image"> -->
     </header>
     <main>
+        <form  id = "form">
+            <fieldset>
+                <label for="branchName"> Branch Name</label>
+                <input type="text" id="branchName" name = "branchName" required>
+                <br>
+                <br>
+                <label for="minCust"> Minimum Customer</label>
+                <input type="number" id="minCust" name="minCust" required>
+                <br>
+                <br>
+                <label for="maxCust">Maximum Customer</label>
+                <input type="number" id="maxCust" name="maxCust" required>
+                <br>
+                <br>
+                <label for="avgCookies">Average Cookies</label>
+                <!-- StackOverflow for the step = .01-->
+                <input type="number" id="avgCookies" name="avgCookies" step=".01" required>
+                <br>
+                <br>
+                <input type="submit" value = "add">
+                <br>
+                <br>
+
+            </fieldset>
+
+
+        </form>
         <div id = "container">
             
         </div>
+        
     </main>
     <script src="js/app.js"></script>
 </body>

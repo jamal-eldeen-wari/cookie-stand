@@ -35,6 +35,28 @@ Shop.prototype.getCookies = function(){
     this.total = this.total+this.cookiesArray[i];
   }
 };
+
+let form = document.getElementById('form');
+form.addEventListener('submit', addingToTable);
+function addingToTable(event) {
+  event.preventDefault();
+  let i = 7;
+  // console.log(event.target.branchName.value);
+  let name = event.target.branchName.value;
+  let minimumCust = event.target.minCust.value;
+  let maximumCust = event.target.maxCust.value;
+  let averageCookies = event.target.avgCookies.value;
+  // console.log(maximumCust);
+
+  let branch = new Shop(name, parseInt(minimumCust), parseInt(maximumCust), parseInt(averageCookies));
+  branch.getRandomNumberOfCustomers();
+  branch.getCookies();
+  branch.render();
+  table.deleteRow(i);
+  ++i;
+  footer();
+  // console.log(branch);
+}
 // This is the table section
 //THIS FUNCTION IS RESPONSIBLE FOR VIEWING DATA ON THE TABLE.
 Shop.prototype.render = function(){
@@ -98,12 +120,16 @@ function footer(){
 
 }
 
+
+
 new Shop('Seattle', 23, 65, 6.3);
 new Shop('Tokyo', 3, 24, 1.2);
 new Shop('Dubai', 11, 38, 3.7);
 new Shop('Paris', 20, 38, 2.3);
 new Shop('Lima', 2, 16, 4.6);
-
+// table.textContent =' ';
+// new Shop('Amman', 3, 65, 2.1);
+console.log(shops);
 header();
 for(let i = 0; i<shops.length; i++){
   shops[i].getRandomNumberOfCustomers();
