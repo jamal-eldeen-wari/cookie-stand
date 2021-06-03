@@ -39,9 +39,8 @@ Shop.prototype.getCookies = function(){
 let form = document.getElementById('form');
 form.addEventListener('submit', addingToTable);
 function addingToTable(event) {
+  let rowCount = table.rows.length;
   event.preventDefault();
-  let i = 7;
-  // console.log(event.target.branchName.value);
   let name = event.target.branchName.value;
   let minimumCust = event.target.minCust.value;
   let maximumCust = event.target.maxCust.value;
@@ -52,11 +51,11 @@ function addingToTable(event) {
   branch.getRandomNumberOfCustomers();
   branch.getCookies();
   branch.render();
-  table.deleteRow(i);
-  ++i;
+  table.deleteRow(rowCount);
   footer();
   // console.log(branch);
 }
+
 // This is the table section
 //THIS FUNCTION IS RESPONSIBLE FOR VIEWING DATA ON THE TABLE.
 Shop.prototype.render = function(){
